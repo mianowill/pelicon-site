@@ -4,7 +4,11 @@ h1{
     color: red;
 }
 
-
+iframe{
+    max-width: 300px;
+    max-height: 100px;
+    
+}
 .centre{
   position: fixed;
   top: 50%;
