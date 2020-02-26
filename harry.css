@@ -11,6 +11,18 @@ h1{
   left: 50%;
   transform: translate(-50%,-50%);
 }
+.inline{
+    display: flex;
+    justify-content: row;
+  
+}
+.gif{
+    max-width: 10vw;
+    max-height: 10vw;
+    margin: auto;
+    transform: translate(50%,50%);
+}
+
 .wrapper {
     height: 100%;
     width: 100%;
