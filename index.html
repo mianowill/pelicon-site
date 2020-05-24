@@ -46,7 +46,7 @@ This is the day the world stood still.
                  <a class="nav_h2" href="">harry#001</a>
                  <a class="nav_h2" target="_blank" href="https://www.facebook.com/clubpelicon/">social media</a>
                  <div>
-                 <a  class="nav_h2" type="button" href=""  class="btn btn-primary" data-toggle="modal" data-target="#Modal">
+                 <a  onclick="unmute()" class="nav_h2" type="button" href=""  class="btn btn-primary" data-toggle="modal" data-target="#Modal">
                        mix
                  </a>
                  <button class="nav_h2" onclick="mute()">stop mix</button>
@@ -108,7 +108,7 @@ This is the day the world stood still.
     centerMode: true,
     focusOnSelect: true
   });
-      });
+     
   
 
 
@@ -117,14 +117,21 @@ This is the day the world stood still.
   $('.slick-next')[0].click();
  }
   
-          
+});      
 const mute = () => {
-  // SC.stream("/tracks/330389492", function(sound) {
-  //   SC.sound = sound;
-  //   SC.sound.pause();
-// });
+
+document.getElementById('theMix').src = 'x'
 
 }
-         
+
+
+const unmute = () => {
+
+document.getElementById('theMix').src = 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/330389492&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true'
+
+}
+
+
+
           
           </script>
