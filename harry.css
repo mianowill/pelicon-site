@@ -162,11 +162,13 @@ color: grey;
     padding: 6px;
     color: white;
 }
+.slider-for{}
 @media screen and (max-width: 1280px) {
     .logo {
         width: 70vw;
         position: absolute;
         z-index: -1;
+        margin-top: 30vh;
     }
     .centre_p{
         display: none;

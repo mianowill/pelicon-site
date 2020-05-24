@@ -11,21 +11,9 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
         <script data-ad-client="ca-pub-4841773572239439" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
-<script>
-    
-
-        
-        //     var isShown = false;
-        //     const showMix = () => {
-        //    if (isShown == false) { $('#theMix').show(); isShown = true;   } else { $('#theMix').hide(); isShown = false; }
-           
-            
-        //     }
-      
-       
-        
-        </script>
 <body >
         <div class="wrapper">
                 
@@ -42,12 +30,14 @@ This is the day the world stood still.
                  <a class="nav_h2" target="_blank" href="https://soundcloud.com/clubpelicon">soundcloud</a>
                  <a class="nav_h2">harry#001</a>
                  <a class="nav_h2" target="_blank" href="https://www.facebook.com/clubpelicon/">social media</a>
-                 <a  class="nav_h2" type="button"  class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                 <a  class="nav_h2" type="button"  class="btn btn-primary" data-toggle="modal" data-target="#Modal">
                        mix
                  </a>
-                      
-                      <!-- Modal -->
-                      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                 <a  onclick='clickNext()' class="nav_h2" type="button"  class="btn btn-primary" data-toggle="modal" data-target="#ModalTwo">
+                  gallery
+            </a>                      
+                      <!-- Modal1 -->
+                      <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                           <div class="modal-content">
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -62,11 +52,73 @@ This is the day the world stood still.
                           </div>
                         </div>
                       </div>
-                         <!-- Modal -->
+                         <!-- Modal1 -->
+
+                          <!-- Modal2 -->
+                      <div class="modal fade" id="ModalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            <div class="modal-body">
+                              <div class="slider-for">
+                                <img src="./gallery/12th.jpg"/>
+                                <img src="./gallery/15941396_1639412213019582_3437674090037748469_n.png"/>
+                                <img src="./gallery/bleach.jpg"/>
+                                <img src="./gallery/card.jpg"/>
+                                <img src="./gallery/jzbel.jpg"/>
+                                <img src="./gallery/plo.jpg"/>
+                                <img src="./gallery/refleconpl.jpg"/>
+                                <img src="./gallery/swag.jpg"/>
+                                <img src="./gallery/umfang.jpg"/>
+                                <img src="./gallery/whities.jpg"/>
+                                <img src="./gallery/whitieseb.jpg"/>
+                              </div>
+                              <div class="slider-nav"></div>
+                              
+                              <!-- content -->
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                         <!-- Modal2 -->
                
             </div>
             <img class="logo" src="logo.png"/>
         </div>
 </body>
 </html>
+<script>
 
+  $(document).ready(function(){
+    $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    asNavFor: '.slider-nav'
+  });
+  $('.slider-nav').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: false,
+    centerMode: true,
+    focusOnSelect: true
+  });
+      });
+  
+
+ const clickNext = () => {
+  $('.slick-next')[0].click();
+ }
+  
+          
+
+         
+          
+          </script>
