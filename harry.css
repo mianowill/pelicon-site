@@ -145,10 +145,22 @@ iframe{
     font-size: 30px;
     text-decoration: none;
     font-weight: 800;
+    background-color: black;
+    color: white!important;
+}
+.next_button{
+    color: rgb(189, 190, 189);
+    background-color: rgb(250, 51, 15);
 }
 .nav_h2:hover{
 text-decoration: underline;
-color: grey;
+color: white;
+background-color: rgb(250, 51, 15);
+}
+.next_button:hover{
+    text-decoration: underline;
+color: white;
+background-color: black;
 }
 
 .modal-content{
@@ -161,6 +173,13 @@ color: grey;
     width: 30vw;
     padding: 6px;
     color: white;
+}
+.slick-prev{
+    display: none!important;
+}
+.slick-next{
+    display: none!important;
+
 }
 .slider-for{}
 @media screen and (max-width: 1280px) {
