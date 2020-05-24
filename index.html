@@ -53,12 +53,15 @@ This is the day the world stood still.
                  <button class="nav_h2" onclick="mute()">stop mix</button>
                 </div>
 
-                 <a  onclick='nav(1)' class="nav_h2" type="button"  class="btn btn-primary" data-toggle="modal" data-target="#ModalTwo">
+                 <a  onclick='nav(1)' class="nav_h2" type="button"  class="btn btn-primary" >
                   prev
             </a>      
-                 <a  onclick='nav()' class="nav_h2" type="button"  class="btn btn-primary" data-toggle="modal" data-target="#ModalTwo">
+                 <a  onclick='nav()' class="nav_h2" type="button"  class="btn btn-primary" >
                   next
-            </a>                      
+            </a>       
+            <a   onclick="fadeInModalText()" class="nav_h2" type="button"  class="btn btn-primary" data-toggle="modal" data-target="#ModalTwo">
+              acts
+        </a>                     
                       <!-- Modal1 -->
                       <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
@@ -75,6 +78,49 @@ This is the day the world stood still.
                           </div>
                         </div>
                       </div>
+                      <!-- modal 1 ends-->
+                       <!-- Modal2 -->
+                       <div class="modal fade" id="ModalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            <div class="modal-body">
+                              <h3 ><span >Asquith, </span>
+                                <span >Courtesy, </span>
+                                <span>DJ Normal 4, </span>
+                                <span>DJ Seinfeld, </span>
+                                <span>DJ Swagger, </span>
+                                <span>D. Futers, </span>
+                                <span>DJ Texas, </span>
+                                <span>LNS, </span>
+                                <span>Sybil, </span>
+                                <span>Umfang, </span>
+                                <span>Minimal Violence, </span>
+                                <span>Bleaching Agent, </span>
+                                <span>Vladimir Ivcovich, </span>
+                                <span>Tasker, </span>
+                                <span>Amelia, </span>
+                                <span>PLO man, </span>
+                                <span>DJ Eliot, </span>
+                                <span>12th Isle, </span>
+                                <span>Kenny White, </span>
+                                <span>Al White, </span>
+                                <span>Christoph De Babalon ( live ), </span>
+                                <span>J-Zbel ( live ) , </span>
+                                <span>Simo Cell, </span>
+                                <span>Judaah, </span>
+                                <span>Pilotwings & more </span>
+                              </h3>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- modal 2 ends-->
                   
             </div>
             <img class="logo" src="logo.png"/>
@@ -131,7 +177,7 @@ document.getElementById('theMix').src = 'https://w.soundcloud.com/player/?url=ht
 
 
 
-
+// parrallax starts
 
 document.addEventListener("DOMContentLoaded", function DomContentLoaded(){
   //Get the element you want to slow down;
@@ -173,6 +219,18 @@ document.addEventListener("DOMContentLoaded", function DomContentLoaded(){
 
 });
 
+// parallax ends
+
+$('span').hide();
+
+const fadeInModalText = () => {
+
+
+
+$("span").each(function(index) {
+    $(this).delay(400*index).fadeIn(300);
+});
+}
 
 
 
