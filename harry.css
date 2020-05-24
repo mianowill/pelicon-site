@@ -187,6 +187,27 @@ iframe{
 
 }
 .slider-for{}
+
+
+
+.biggestBig {
+    margin: auto;
+    align-self: center;
+    width: 90%;
+    min-height: 100%;
+}
+
+.faded {
+
+}
+
+.slow {
+    width: 250px;
+    height: auto;
+    position: absolute;
+}
+
+
 @media screen and (max-width: 1280px) {
     .logo {
         width: 70vw;

@@ -14,7 +14,8 @@
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
-<body >
+
+<body id="mainDiv"class="biggestBig faded">
   <div class="slider-for">
     <img src="./gallery/12th.jpg"/>
     <img src="./gallery/bleach.jpg"/>
@@ -33,7 +34,7 @@
         <div class="wrapper">
                 
             <div class="centre">
-              <p class="centre_p">
+              <p class="centre_p slow" id="slowDiv" >
                 Deafening whispers loud and clear,<br>
 The sound of nothing meets my ears,<br>
 I get the message - I know the drill,<br>
@@ -79,12 +80,7 @@ This is the day the world stood still.
             <img class="logo" src="logo.png"/>
         </div>
         <div class="centre">
-          <p class="centre_p">
-            Deafening whispers loud and clear,<br>
-The sound of nothing meets my ears,<br>
-I get the message - I know the drill,<br>
-This is the day the world stood still.
-          </p>
+      
                
         </div>
 </body>
@@ -107,8 +103,7 @@ This is the day the world stood still.
     dots: false,
     centerMode: true,
     focusOnSelect: true
-  });
-     
+  });     
 });  
 
 
@@ -130,6 +125,55 @@ const unmute = () => {
 document.getElementById('theMix').src = 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/330389492&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true'
 
 }
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function DomContentLoaded(){
+  //Get the element you want to slow down;
+  var slowDiv = document.getElementById('slowDiv');
+  //Set its style.top to be the offsetTop so if style.top is not set, it will still work.
+  slowDiv.style.top = slowDiv.offsetTop + 'px';
+  //set the last scrollTop to use for direction
+  var lastScrollTop = 0;
+  //Get the element you are scrolling against
+  var relativeSpeedDiv = document.getElementById('main');
+
+
+  var moveLittle = function MoveLittle(speed, scrollY) {
+    //Get the current top of the slow element
+    var topVal = parseInt(slowDiv.style.top);
+    //Check scroll direction
+    if (isScrollingDown(scrollY)) {
+      topVal = topVal - speed - 30;
+    } else {
+      topVal = topVal - speed;
+    }
+    //Set new top of slow element
+    slowDiv.style.top = topVal + 'px';
+  };
+
+  var isScrollingDown = function IsScrollingDown(scrollY) {
+    var retVal = false;
+    if (scrollY > lastScrollTop) {
+      retVal = true;
+    }
+    lastScrollTop = scrollY;
+    return retVal;
+  };
+
+  window.onscroll = function WindowScroll() {
+    //Send speed and current scroll Y
+    moveLittle(10, this.scrollY);
+  }
+
+});
+
+
 
 
 
