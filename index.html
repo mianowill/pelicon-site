@@ -45,10 +45,17 @@ This is the day the world stood still.
                  <a class="nav_h2" target="_blank" href="https://soundcloud.com/clubpelicon">soundcloud</a>
                  <a class="nav_h2" href="">harry#001</a>
                  <a class="nav_h2" target="_blank" href="https://www.facebook.com/clubpelicon/">social media</a>
+                 <div>
                  <a  class="nav_h2" type="button" href=""  class="btn btn-primary" data-toggle="modal" data-target="#Modal">
                        mix
                  </a>
-                 <a  onclick='clickNext()' class="nav_h2 next_button" type="button"  class="btn btn-primary" data-toggle="modal" data-target="#ModalTwo">
+                 <button class="nav_h2" onclick="mute()">stop mix</button>
+                </div>
+
+                 <a  onclick='nav(1)' class="nav_h2" type="button"  class="btn btn-primary" data-toggle="modal" data-target="#ModalTwo">
+                  prev
+            </a>      
+                 <a  onclick='nav()' class="nav_h2" type="button"  class="btn btn-primary" data-toggle="modal" data-target="#ModalTwo">
                   next
             </a>                      
                       <!-- Modal1 -->
@@ -59,7 +66,7 @@ This is the day the world stood still.
                                 <span aria-hidden="true">&times;</span>
                               </button>
                             <div class="modal-body">
-                                <iframe  id="theMix" width="100%" height="300" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/330389492&color=%23ff5500&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"></iframe>
+                                <iframe  id="theMix" width="100%" height="300" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/330389492&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"></iframe>
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -71,6 +78,15 @@ This is the day the world stood still.
             </div>
             <img class="logo" src="logo.png"/>
         </div>
+        <div class="centre">
+          <p class="centre_p">
+            Deafening whispers loud and clear,<br>
+The sound of nothing meets my ears,<br>
+I get the message - I know the drill,<br>
+This is the day the world stood still.
+          </p>
+               
+        </div>
 </body>
 </html>
 <script>
@@ -81,6 +97,7 @@ This is the day the world stood still.
     slidesToScroll: 1,
     arrows: true,
     fade: true,
+    infinite: true,
     asNavFor: '.slider-nav'
   });
   $('.slider-nav').slick({
@@ -93,15 +110,21 @@ This is the day the world stood still.
   });
       });
   
-var slideNav = 0;
 
- const clickNext = (prev) => {
-   if (prev) slideNav = slideNav -1;
-  $('.slick-next')[slideNav].click();
+
+ const nav = (prev) => {
+   if (prev) $('.slick-prev')[0].click();
+  $('.slick-next')[0].click();
  }
   
           
+const mute = () => {
+  // SC.stream("/tracks/330389492", function(sound) {
+  //   SC.sound = sound;
+  //   SC.sound.pause();
+// });
 
+}
          
           
           </script>

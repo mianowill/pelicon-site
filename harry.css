@@ -168,13 +168,18 @@ background-color: black;
     margin-top: 20vh;
     
 }
-
+iframe{
+    volume: silent;
+}
 .centre_p{
     width: 30vw;
     padding: 6px;
     color: white;
+    background-color: white;
+    color: black;
 }
 .slick-prev{
+    z-index: 1000;
     display: none!important;
 }
 .slick-next{
