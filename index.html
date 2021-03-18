@@ -1,242 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="harry.css"/>
-        <link href="//db.onlinewebfonts.com/c/27352c89446d1f66c18199ff2b1f0c60?family=Graebenbach+Mono" rel="stylesheet" type="text/css"/>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <title>Club Pelicon</title>
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
-        <script data-ad-client="ca-pub-4841773572239439" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="harry.css" />
+    <link
+      href="//db.onlinewebfonts.com/c/27352c89446d1f66c18199ff2b1f0c60?family=Graebenbach+Mono"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Club Pelicon</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"
+      integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      data-ad-client="ca-pub-4841773572239439"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+  </head>
 
-<body id="mainDiv"class="biggestBig faded">
-        <iframe src="http://radio.clubpelicon.club/hardcore"/>
-  <div class="slider-for">
-    <img src="./gallery/12th.jpg"/>
-    <img src="./gallery/bleach.jpg"/>
-    <img src="./gallery/card.jpg"/>
-    <img src="./gallery/jzbel.jpg"/>
-    <img src="./gallery/plo.jpg"/>
-    <img src="./gallery/refleconpl.jpg"/>
-    <img src="./gallery/swag.jpg"/>
-    <img src="./gallery/umfang.jpg"/>
-    <img src="./gallery/whities.jpg"/>
-    <img src="./gallery/whitieseb.jpg"/>
-  </div>
-  <div class="slider-nav"></div>
+  <body id="mainDiv" class="biggestBig faded">
+    <div class="slider-for">
+      <img src="./gallery/12th.jpg" />
+      <img src="./gallery/bleach.jpg" />
+      <img src="./gallery/card.jpg" />
+      <img src="./gallery/jzbel.jpg" />
+      <img src="./gallery/plo.jpg" />
+      <img src="./gallery/refleconpl.jpg" />
+      <img src="./gallery/swag.jpg" />
+      <img src="./gallery/umfang.jpg" />
+      <img src="./gallery/whities.jpg" />
+      <img src="./gallery/whitieseb.jpg" />
+    </div>
+    <div class="slider-nav"></div>
 
-  
-        <div class="wrapper">
-                
-            <div class="centre">
-              <p class="centre_p slow" id="slowDiv" >
-                Deafening whispers loud and clear,<br>
-The sound of nothing meets my ears,<br>
-I get the message - I know the drill,<br>
-This is the day the world stood still.
-              </p>
-                   
+    <div class="wrapper">
+      <div class="centre">
+        <p class="centre_p slow" id="slowDiv">
+          Deafening whispers loud and clear,<br />
+          The sound of nothing meets my ears,<br />
+          I get the message - I know the drill,<br />
+          This is the day the world stood still.
+        </p>
+      </div>
+      <div class="inline">
+        <div>
+          <a
+            onclick="nav()"
+            class="nav_h2"
+            type="button"
+            class="btn btn-primary"
+          >
+            &#x2192;
+          </a>
+          <a
+            onclick="nav(1)"
+            class="nav_h2"
+            type="button"
+            class="btn btn-primary"
+          >
+            &#x2190;
+          </a>
+        </div>
+        <a
+          class="nav_h2"
+          target="_blank"
+          href="https://soundcloud.com/clubpelicon"
+          >soundcloud</a
+        >
+        <a class="nav_h2" href="">harry#001</a>
+        <a
+          class="nav_h2"
+          target="_blank"
+          href="https://www.facebook.com/clubpelicon/"
+          >social media</a
+        >
+        <div>
+          <a
+            onclick="unmute()"
+            class="nav_h2"
+            type="button"
+            href=""
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#Modal"
+          >
+            mix
+          </a>
+          <button class="nav_h2" onclick="mute()">stop mix</button>
+        </div>
+        <a
+          onclick="fadeInModalText()"
+          class="nav_h2"
+          type="button"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#ModalTwo"
+        >
+          acts
+        </a>
+        <!-- Modal1 -->
+        <div
+          class="modal fade"
+          id="Modal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div class="modal-body">
+                <iframe
+                  id="theMix"
+                  width="100%"
+                  height="300"
+                  scrolling="yes"
+                  frameborder="no"
+                  allow="autoplay"
+                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/330389492&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"
+                ></iframe>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
             </div>
-            <div class="inline">
-              <div>
-                <a  onclick='nav()' class="nav_h2" type="button"  class="btn btn-primary" >
-                  &#x2192;
-            </a>   
-              <a  onclick='nav(1)' class="nav_h2" type="button"  class="btn btn-primary" >
-                &#x2190;
-          </a>      
-              
+          </div>
         </div>
-                 <a class="nav_h2" target="_blank" href="https://soundcloud.com/clubpelicon">soundcloud</a>
-                 <a class="nav_h2" href="">harry#001</a>
-                 <a class="nav_h2" target="_blank" href="https://www.facebook.com/clubpelicon/">social media</a>
-                 <div>
-                 <a  onclick="unmute()" class="nav_h2" type="button" href=""  class="btn btn-primary" data-toggle="modal" data-target="#Modal">
-                       mix
-                 </a>
-                 <button class="nav_h2" onclick="mute()">stop mix</button>
-                </div>   
-            <a   onclick="fadeInModalText()" class="nav_h2" type="button"  class="btn btn-primary" data-toggle="modal" data-target="#ModalTwo">
-              acts
-        </a>                     
-                      <!-- Modal1 -->
-                      <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            <div class="modal-body">
-                                <iframe  id="theMix" width="100%" height="300" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/330389492&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true"></iframe>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- modal 1 ends-->
-                       <!-- Modal2 -->
-                       <div class="modal fade" id="ModalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            <div class="modal-body">
-                              <h3 ><span >Asquith, </span>
-                                <span >Courtesy, </span>
-                                <span>DJ Normal 4, </span>
-                                <span>DJ Seinfeld, </span>
-                                <span>DJ Swagger, </span>
-                                <span>D. Futers, </span>
-                                <span>DJ Texas, </span>
-                                <span>LNS, </span>
-                                <span>Sybil, </span>
-                                <span>Umfang, </span>
-                                <span>Minimal Violence, </span>
-                                <span>Bleaching Agent, </span>
-                                <span>Vladimir Ivcovich, </span>
-                                <span>Tasker, </span>
-                                <span>Amelia, </span>
-                                <span>PLO man, </span>
-                                <span>DJ Eliot, </span>
-                                <span>12th Isle, </span>
-                                <span>Kenny White, </span>
-                                <span>Al White, </span>
-                                <span>Christoph De Babalon ( live ), </span>
-                                <span>J-Zbel ( live ) , </span>
-                                <span>Simo Cell, </span>
-                                <span>Judaah, </span>
-                                <span>Pilotwings & more </span>
-                              </h3>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- modal 2 ends-->
-                  
+        <!-- modal 1 ends-->
+        <!-- Modal2 -->
+        <div
+          class="modal fade"
+          id="ModalTwo"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div class="modal-body">
+                <h3>
+                  <span>Asquith, </span>
+                  <span>Courtesy, </span>
+                  <span>DJ Normal 4, </span>
+                  <span>DJ Seinfeld, </span>
+                  <span>DJ Swagger, </span>
+                  <span>D. Futers, </span>
+                  <span>DJ Texas, </span>
+                  <span>LNS, </span>
+                  <span>Sybil, </span>
+                  <span>Umfang, </span>
+                  <span>Minimal Violence, </span>
+                  <span>Bleaching Agent, </span>
+                  <span>Vladimir Ivcovich, </span>
+                  <span>Tasker, </span>
+                  <span>Amelia, </span>
+                  <span>PLO man, </span>
+                  <span>DJ Eliot, </span>
+                  <span>12th Isle, </span>
+                  <span>Kenny White, </span>
+                  <span>Al White, </span>
+                  <span>Christoph De Babalon ( live ), </span>
+                  <span>J-Zbel ( live ) , </span>
+                  <span>Simo Cell, </span>
+                  <span>Judaah, </span>
+                  <span>Pilotwings & more </span>
+                </h3>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
             </div>
-            <img class="logo" src="logo.png"/>
+          </div>
         </div>
-        <div class="centre">
-      
-               
-        </div>
-</body>
+        <!-- modal 2 ends-->
+      </div>
+      <img class="logo" src="logo.png" />
+    </div>
+    <div class="centre"></div>
+  </body>
 </html>
 <script>
-
-  $(document).ready(function(){
-    $('.slider-for').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    fade: false,
-    infinite: true,
-    asNavFor: '.slider-nav'
+  $(document).ready(function () {
+    $(".slider-for").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      fade: false,
+      infinite: true,
+      asNavFor: ".slider-nav",
+    });
+    $(".slider-nav").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      asNavFor: ".slider-for",
+      dots: false,
+      centerMode: true,
+      focusOnSelect: true,
+    });
   });
-  $('.slider-nav').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    asNavFor: '.slider-for',
-    dots: false,
-    centerMode: true,
-    focusOnSelect: true
-  });     
-});  
 
-
- const nav = (prev) => {
-   if (prev) $('.slick-prev')[0].click();
-  $('.slick-next')[0].click();
- }
-  
-    
-const mute = () => {
-
-document.getElementById('theMix').src = 'x'
-
-}
-
-
-const unmute = () => {
-
-document.getElementById('theMix').src = 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/330389492&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true'
-
-}
-
-
-
-
-
-
-// parrallax starts
-
-document.addEventListener("DOMContentLoaded", function DomContentLoaded(){
-  //Get the element you want to slow down;
-  var slowDiv = document.getElementById('slowDiv');
-  //Set its style.top to be the offsetTop so if style.top is not set, it will still work.
-  slowDiv.style.top = slowDiv.offsetTop + 'px';
-  //set the last scrollTop to use for direction
-  var lastScrollTop = 0;
-  //Get the element you are scrolling against
-  var relativeSpeedDiv = document.getElementById('main');
-
-
-  var moveLittle = function MoveLittle(speed, scrollY) {
-    //Get the current top of the slow element
-    var topVal = parseInt(slowDiv.style.top);
-    //Check scroll direction
-    if (isScrollingDown(scrollY)) {
-      topVal = topVal - speed - 20;
-    } else {
-      topVal = topVal - speed;
-    }
-    //Set new top of slow element
-    slowDiv.style.top = topVal + 'px';
+  const nav = (prev) => {
+    if (prev) $(".slick-prev")[0].click();
+    $(".slick-next")[0].click();
   };
 
-  var isScrollingDown = function IsScrollingDown(scrollY) {
-    var retVal = false;
-    if (scrollY > lastScrollTop) {
-      retVal = true;
-    }
-    lastScrollTop = scrollY;
-    return retVal;
+  const mute = () => {
+    document.getElementById("theMix").src = "x";
   };
 
-  window.onscroll = function WindowScroll() {
-    //Send speed and current scroll Y
-    moveLittle(10, this.scrollY);
-  }
+  const unmute = () => {
+    document.getElementById("theMix").src =
+      "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/330389492&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=true";
+  };
 
-});
+  // parrallax starts
 
-// parallax ends
+  document.addEventListener("DOMContentLoaded", function DomContentLoaded() {
+    //Get the element you want to slow down;
+    var slowDiv = document.getElementById("slowDiv");
+    //Set its style.top to be the offsetTop so if style.top is not set, it will still work.
+    slowDiv.style.top = slowDiv.offsetTop + "px";
+    //set the last scrollTop to use for direction
+    var lastScrollTop = 0;
+    //Get the element you are scrolling against
+    var relativeSpeedDiv = document.getElementById("main");
 
-$('span').hide();
+    var moveLittle = function MoveLittle(speed, scrollY) {
+      //Get the current top of the slow element
+      var topVal = parseInt(slowDiv.style.top);
+      //Check scroll direction
+      if (isScrollingDown(scrollY)) {
+        topVal = topVal - speed - 20;
+      } else {
+        topVal = topVal - speed;
+      }
+      //Set new top of slow element
+      slowDiv.style.top = topVal + "px";
+    };
 
-const fadeInModalText = () => {
+    var isScrollingDown = function IsScrollingDown(scrollY) {
+      var retVal = false;
+      if (scrollY > lastScrollTop) {
+        retVal = true;
+      }
+      lastScrollTop = scrollY;
+      return retVal;
+    };
 
+    window.onscroll = function WindowScroll() {
+      //Send speed and current scroll Y
+      moveLittle(10, this.scrollY);
+    };
+  });
 
+  // parallax ends
 
-$("span").each(function(index) {
-    $(this).delay(400*index).fadeIn(300);
-});
-}
+  $("span").hide();
 
-
-
-
-          
-          </script>
+  const fadeInModalText = () => {
+    $("span").each(function (index) {
+      $(this)
+        .delay(400 * index)
+        .fadeIn(300);
+    });
+  };
+</script>
