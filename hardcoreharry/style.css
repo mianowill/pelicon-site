@@ -23,11 +23,6 @@ body{
 
 }
 
-.mix{
-    /* max-width: 90%; */
-    /* align-items: center; */
-}
-
 .container {
     flex: 1 auto;
     display: flex;
@@ -102,11 +97,11 @@ title{
 }
 
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 
     :root {        
         --background: #202124;
         --color: white;
     }
-  }
+  } */
   
