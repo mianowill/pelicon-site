@@ -17,15 +17,13 @@
             <img src="fka.gif" style="max-width: 45em;"></img>
             <h2>links</h2>
             <div id="links">
-                <a class="link" href="https://guestlist.co/events/711363">[Link] Keep Hush x AIAIAI: Off Sight Bristol
-                    <br><br>Free RSVP</a>
+                <!-- <a class="link" href="https://guestlist.co/events/711363">[Link] Keep Hush x AIAIAI: Off Sight Bristol
+                    <br><br>Free RSVP</a> -->
                 <a class="link" href="https://toughact.fun">[Link] Tough Act website
-                    <br><br><i>Next event on April 8th!</i>
+                    <br><br><i>Next event on April 8th w/ <span id="headliner">?????? (USA)</span>, Angel D'lite, DJ Netflex, salt pillar, d. clemente, DJ Soyboi, FKA Hardcore</i>
                 </a>
-                <a class="link" href "babycakes_fka_hardcore_edit.mp3" rel="noopener">[Free download] 3 of a Kind - Babycakes (FKA Hardcore's 10 pints deep at
-                    Bangface edit)</a>
-                <a class="link" href="http://files.clubpelicon.club/HARDCORE_SOY_LIVING_IT_LARGE.blend" rel="noopener">[Free download] Hardcore Soy: Living it Large .blend file<br><br>
-                    <img src="livingitlarge.webp" width=50% class="img"></a>
+                <!-- <a class="link" href="http://files.clubpelicon.club/HARDCORE_SOY_LIVING_IT_LARGE.blend" rel="noopener">[Free download] Hardcore Soy: Living it Large .blend file<br><br>
+                    <img src="livingitlarge.webp" width=50% class="img"></a> -->
             </div>
 
             <h2>mixes</h2>
@@ -35,7 +33,11 @@
                         target="_blank" style="color: #cccccc; text-decoration: none;">Live @ Tough Act, The White Hotel, Dec 2021</a></div>
             </div>
             <div class="link">
-                <p>Hardcore Soy on 20ft Radio live from Kyiv: no sleep, all shellers!</p>
+                <p>FKA Hardcore @ Keep Hush, Bristol</p>
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/lrZelw1DJZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="link">
+                <p>Hardcore Soy on 20ft Radio live from Kyiv</p>
                 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/pqBipy5FEus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="link">
@@ -81,5 +83,14 @@
     </div>
     <footer> (c) fka hardcore 2022 </footer>
 </body>
+<script>
+    lineup = document.getElementById("lineup");
+    var now = new Date();
+    var release_date = new Date(2022, 2, 24, 19, 0, 0, 0);
+    if (now > release_date) {
+        // secret lineup information, no peeking!
+        lineup.innerHTML = "Kilbourne";
+    }
+</script>
 
 </html>
