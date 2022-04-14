@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap');
-
 :root {
     --font: 'Roboto Mono', monospace;
     --background: #f5d547;
@@ -8,7 +7,7 @@
     /* blue: 1446a0, pink: db3069 */
 }
 
-body{
+body {
     background-color: var(--background);
     color: var(--color);
     font-family: var(--font);
@@ -20,7 +19,6 @@ body{
     min-height: 100vh;
     /* min-width: 100vw; */
     flex-direction: column;
-
 }
 
 .container {
@@ -31,7 +29,7 @@ body{
     text-align: center;
 }
 
-.content{
+.content {
     display: flex;
     flex-direction: column;
     flex: 1 auto;
@@ -40,14 +38,14 @@ body{
     margin: 0;
 }
 
-footer{
+footer {
     text-align: center;
     font-size: 0.75rem;
     font-weight: 400;
     padding-bottom: 20px;
 }
 
-#userPhoto{
+#userPhoto {
     width: 96px;
     height: 96px;
     display: block;
@@ -56,7 +54,7 @@ footer{
     border: solid var(--color) 2px;
 }
 
-#userName{
+#userName {
     width: 100%;
     font-size: 1.5rem;
     font-weight: 400;
@@ -67,14 +65,14 @@ footer{
     color: var(--color);
 }
 
-#links{
+#links {
     max-width: 90%;
     width: auto;
     display: block;
     margin: 27px auto;
 }
 
-.link{
+.link {
     display: block;
     margin-bottom: 20px;
     padding: 17px;
@@ -83,21 +81,20 @@ footer{
     border-radius: 5px;
     border: dashed var(--color) 2px;
     text-align: center;
-    text-decoration: none;  
-    color: var(--color);  
+    text-decoration: none;
+    color: var(--color);
     word-wrap: break-word;
     width: 90%;
     max-width: 35em;
     background-color: #fff6cd;
 }
 
-img{
+img {
     border-radius: 5%;
     width: 100%;
 }
 
-
-title{
+title {
     font-family: "Open Sans", sans-serif;
     font-weight: 800;
 }
@@ -110,4 +107,3 @@ title{
         --color: white;
     }
   } */
-  
