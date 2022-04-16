@@ -14,7 +14,8 @@
     }
     
     body {
-        background-color: #fa330f;
+        --bg: #ee2b00;
+        background-color: var(--bg);
     }
     
     blockquote {
@@ -34,14 +35,14 @@
         float: right;
         max-height: 20vh;
         max-width: 100%;
-        background-color: #fa330f;
+        background-color: var(--bg);
         z-index: 2;
     }
     
     .padding {
         position: fixed;
         top: 0;
-        background-color: #fa330f;
+        background-color: var(--bg);
         height: 25vh;
         width: 100%;
         transform: translate(0%, 37.5vh);
