@@ -109,7 +109,7 @@
                     var html = '<p>' + date.toDateString() + ': [' + event.title + '] ' + event.name;
 
                     if (date > now) {
-                        upcoming.innerHTML += html;
+                        upcoming.innerHTML = html + upcoming.innerHTML;
                     } else {
                         past.innerHTML += html;
                     }
