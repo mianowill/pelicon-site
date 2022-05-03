@@ -1,34 +1,14 @@
 {
     "events": [
         {
-            "date": "2022-04-29",
+            "date": "2022-08-26",
             "title": "DJ Set",
-            "name": "Freeparty, Manchester"
+            "name": "TBA, Manchester"
         },
         {
-            "date": "2022-05-13",
-            "title": "Radio",
-            "name": "Belladonna Bitch Fist (FKA Hardcore x Hats) on Rainy City Radio"
-        },
-        {
-            "date": "2022-05-20",
-            "title": "Radio",
-            "name": "Hardcore Soy show on Steam Radio"
-        },
-        {
-            "date": "2022-05-27",
+            "date": "2022-06-24",
             "title": "DJ Set",
-            "name": "TBA, Sheffield"
-        },
-        {
-            "date": "2022-06-03",
-            "title": "DJ Set",
-            "name": "Tough Act @ Yes, Manchester"
-        },
-        {
-            "date": "2022-06-17",
-            "title": "Radio",
-            "name": "Hardcore Soy show on Steam Radio"
+            "name": "TBA, London"
         },
         {
             "date": "2022-06-17",
@@ -36,9 +16,34 @@
             "name": "Bad Taste @ Deaf Institute, Manchester"
         },
         {
-            "date": "2022-06-24",
+            "date": "2022-06-17",
+            "title": "Radio",
+            "name": "Hardcore Soy show on Steam Radio"
+        },
+        {
+            "date": "2022-06-03",
             "title": "DJ Set",
-            "name": "TBA, London"
+            "name": "Tough Act @ Yes, Manchester"
+        },
+        {
+            "date": "2022-05-27",
+            "title": "DJ Set",
+            "name": "TBA, Sheffield"
+        },
+        {
+            "date": "2022-05-20",
+            "title": "Radio",
+            "name": "Hardcore Soy show on Steam Radio"
+        },
+        {
+            "date": "2022-05-13",
+            "title": "Radio",
+            "name": "Belladonna Bitch Fist (FKA Hardcore x Hats) on Rainy City Radio"
+        },
+        {
+            "date": "2022-04-29",
+            "title": "DJ Set",
+            "name": "Pick and Mix Freeparty, NW"
         },
         {
             "date": "2022-04-15",
