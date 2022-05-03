@@ -29,35 +29,13 @@
                     <img src="livingitlarge.webp" width=50% class="img"></a> -->
             </div>
             <h2>upcoming</h2>
-            <div class="link" style="text-align: left;">
-                <p>2022-04-29: [DJ Set] Freeparty, Manchester</p>
-                <p>2022-05-13: [Radio] Belladonna Bitch Fist (FKA Hardcore x Hats) on Rainy City Radio</p>
-                <p>2022-05-20: [Radio] Hardcore Soy show on Steam Radio</p>
-                <p>2022-05-27: [DJ Set] TBA, Sheffield</p>
-                <p>2022-06-03: [DJ Set] Tough Act @ Yes, Manchester</p>
-                <p>2022-06-17: [Radio] Hardcore Soy show on Steam Radio</p>
-                <p>2022-06-17: [DJ Set] Bad Taste @ Deaf Institute, Manchester</p>
-                <p>2022-06-24: [DJ Set] TBA, London</p>
+            <div id="upcoming" class="link" style="text-align: left;">
+
             </div>
 
             <h2>past</h2>
-            <div class="link" style="text-align: left;">
-                <p>2022-04-15: [DJ Set] License to Jungle @ The Old Red Bus Station, Leeds</p>
-                <p>2022-04-08: [DJ Set] Tough Act @ The White Hotel, Manchester</p>
-                <p href="https://www.mixcloud.com/steamradiomcr/hardcore-soy-w-dj-laundry-basket/">2022-03-25: [Radio] FKA Hardcore b2b djlaundrybasket on Steam Radio</p>
-                <p href="https://www.mixcloud.com/steamradiomcr/hardcore-soy-hardcore-sans-soy-on-steam-radio-250222/">2022-02-25: [Radio] Hardcore sans Soy on Steam Radio</p>
-                <p>2022-02-11: [DJ Set] Intervention @ Partisan, Manchester</p>
-                <p>2021-12-04: [DJ Set] Tough Act @ The White Hotel, Manchester</p>
-                <p>2021-12-04: [DJ Set] Hardcore Soy for Semi Peppered @ The DBA, Manchester</p>
-                <p>2021-11-10: [DJ] for GLOR1A @ The White Hotel, Manchester</p>
-                <p>2021-10-22: [Radio] Hardcore Chandé on Rainy City Radio</p>
-                <p>2021-09-24: [Radio] Hardcore Soy live on 20ft Radio, Kyiv</p>
-                <p>2021-09-23: [DJ Set] Hardcore Soy for Lucid Juice @ Stage and Radio, Manchester</p>
-                <p>2021-09-04: [DJ Set] Mum's wedding @ secret location, Devon</p>
-                <p>2020-03-06: [DJ Set] Hardcore Soy for Intervention @ Soup Kitchen, Manchester</p>
-                <p>2020-02-22: [DJ Set] Babycakes @ Gut Level, Sheffield</p>
-                <p>2020-01-25: [DJ Set] Hardcore Soy for Intervention @ Partisan, Manchester</p>
-                <p>2019-10-16: [Radio] Hardcore Soy guestmix for Furious Styles on Rinse FM</p>
+            <div id="past" class="link" style="text-align: left;">
+
 
             </div>
 
@@ -131,6 +109,125 @@
         });
 
         subheading.radius(subheading.element.offsetWidth * 0.95 / 2);
+    </script>
+    <script>
+        // TODO: import this from json file
+        const json_data = {
+            "events": [{
+                "date": "2022-04-29",
+                "title": "DJ Set",
+                "name": "Pick and Mix free party, NW"
+            }, {
+                "date": "2022-05-13",
+                "title": "Radio",
+                "name": "Belladonna Bitch Fist (FKA Hardcore x Hats) on Rainy City Radio"
+            }, {
+                "date": "2022-05-20",
+                "title": "Radio",
+                "name": "Hardcore Soy show on Steam Radio"
+            }, {
+                "date": "2022-05-27",
+                "title": "DJ Set",
+                "name": "TBA, Sheffield"
+            }, {
+                "date": "2022-06-03",
+                "title": "DJ Set",
+                "name": "Tough Act @ Yes, Manchester"
+            }, {
+                "date": "2022-06-17",
+                "title": "Radio",
+                "name": "Hardcore Soy show on Steam Radio"
+            }, {
+                "date": "2022-06-17",
+                "title": "DJ Set",
+                "name": "Bad Taste @ Deaf Institute, Manchester"
+            }, {
+                "date": "2022-06-24",
+                "title": "DJ Set",
+                "name": "TBA, London"
+            }, {
+                "date": "2022-04-15",
+                "title": "DJ Set",
+                "name": "License to Jungle @ The Old Red Bus Station, Leeds"
+            }, {
+                "date": "2022-04-08",
+                "title": "DJ Set",
+                "name": "Tough Act @ The White Hotel, Manchester"
+            }, {
+                "date": "2022-03-25",
+                "title": "Radio",
+                "name": "FKA Hardcore b2b djlaundrybasket on Steam Radio"
+            }, {
+                "date": "2022-02-25",
+                "title": "Radio",
+                "name": "Hardcore sans Soy on Steam Radio"
+            }, {
+                "date": "2022-02-11",
+                "title": "DJ Set",
+                "name": "Intervention @ Partisan, Manchester"
+            }, {
+                "date": "2021-12-04",
+                "title": "DJ Set",
+                "name": "Tough Act @ The White Hotel, Manchester"
+            }, {
+                "date": "2021-12-04",
+                "title": "DJ Set",
+                "name": "Hardcore Soy for Semi Peppered @ The DBA, Manchester"
+            }, {
+                "date": "2021-11-10",
+                "title": "DJ",
+                "name": "for GLOR1A @ The White Hotel, Manchester"
+            }, {
+                "date": "2021-10-22",
+                "title": "Radio",
+                "name": "Hardcore Chandé on Rainy City Radio"
+            }, {
+                "date": "2021-09-24",
+                "title": "Radio",
+                "name": "Hardcore Soy live on 20ft Radio, Kyiv"
+            }, {
+                "date": "2021-09-23",
+                "title": "DJ Set",
+                "name": "Hardcore Soy for Lucid Juice @ Stage and Radio, Manchester"
+            }, {
+                "date": "2021-09-04",
+                "title": "DJ Set",
+                "name": "Mum's wedding @ secret location, Devon"
+            }, {
+                "date": "2020-03-06",
+                "title": "DJ Set",
+                "name": "Hardcore Soy for Intervention @ Soup Kitchen, Manchester"
+            }, {
+                "date": "2020-02-22",
+                "title": "DJ Set",
+                "name": "Babycakes @ Gut Level, Sheffield"
+            }, {
+                "date": "2020-01-25",
+                "title": "DJ Set",
+                "name": "Hardcore Soy for Intervention @ Partisan, Manchester"
+            }, {
+                "date": "2019-10-16",
+                "title": "Radio",
+                "name": "Hardcore Soy guestmix for Furious Styles on Rinse FM"
+            }]
+        }
+
+        var events = json_data.events;
+
+        events.forEach(function(event) {
+            var date = new Date(event.date);
+            var now = new Date();
+
+            var upcoming = document.getElementById('upcoming');
+            var past = document.getElementById('past');
+
+            var html = '<p>' + date.toDateString() + ': [' + event.title + '] ' + event.name + '</p>';
+            if (date > now) {
+                upcoming.innerHTML += html;
+            } else {
+                past.innerHTML += html;
+            }
+        });
     </script>
 </body>
 
