@@ -12,6 +12,9 @@
         <p id="subheading" style="width: 100%;">playing other people's music for six years and counting</p>
         <h2>links</h2>
         <div id="links">
+            <a class="link" href="https://ra.co/events/1532560">
+                [Tickets] The Beatriarchy x More Pussy 3mpire @ Gut Level, Sheffield
+            </a>
             <a class="link" href="https://saltmagazine.co.uk/2022/04/16/the-joy-of-queer-dance-floors-in-manchester/">
                     [Feature] Salt Magazine: The Joy of Queer Dance Floors in Manchester</a>
             <a class="link" href="https://aiaiai.audio/off-sight">
@@ -103,6 +106,9 @@
         fetch('./events.json')
             .then(response => response.json())
             .then(data => {
+                var cnt = 0;
+                const num_past_events = 3;
+
                 data.events.forEach(function(event) {
                     var date = new Date(event.date);
                     var now = new Date();
@@ -111,7 +117,12 @@
                     if (date > now) {
                         upcoming.innerHTML += html;
                     } else {
-                        past.innerHTML += html;
+                        if (cnt < num_past_events) {
+                            past.innerHTML += html;
+                        } else if (cnt == num_past_events) {
+                            past.innerHTML += '<p style="text-align: center">...</p>';
+                        }
+                        cnt++;
                     }
                 });
             })
