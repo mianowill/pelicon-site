@@ -8,6 +8,7 @@
     --font: 'Cascadia Code', monospace;
     --background: #f5d547;
     --color: #3c3c3b;
+    --table-border: #00000079 1px dashed;
     /* blue: 1446a0, pink: db3069 */
 }
 
@@ -104,7 +105,7 @@ table {
 td,
 th {
     padding: 10px 10px;
-    border-bottom: #00000079 1px dashed;
+    border-bottom: var(--table-border);
 }
 
 table tr:last-child td {

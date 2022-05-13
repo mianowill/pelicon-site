@@ -38,8 +38,16 @@
         <div class="link tab">
             <table>
                 <tbody id="past">
-
                 </tbody>
+                <tbody id="hidden" style="display: none;">
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            <a href="javascript:void(0);" id="foot"></a>
+                        </td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
 
@@ -107,33 +115,166 @@
     <script>
         var upcoming = document.getElementById('upcoming');
         var past = document.getElementById('past');
+        var hidden = document.getElementById('hidden');
+        var foot = document.getElementById('foot');
 
-        fetch('./events.json')
-            .then(response => response.json())
-            .then(data => {
-                var cnt = 0;
-                const num_past_events = 3;
-                const options = {
-                    year: 'numeric',
-                    month: 'short',
-                    day: 'numeric'
-                };
+        const data = {
+            "events": [{
+                "date": "2022-08-26",
+                "title": "DJ Set",
+                "name": "TBA, Manchester"
+            }, {
+                "date": "2022-06-24",
+                "title": "DJ Set",
+                "name": "TBA, London"
+            }, {
+                "date": "2022-06-17",
+                "title": "DJ Set",
+                "name": "Bad Taste @ Deaf Institute, Manchester"
+            }, {
+                "date": "2022-06-17",
+                "title": "Radio",
+                "name": "Hardcore Soy show on Steam Radio"
+            }, {
+                "date": "2022-06-10",
+                "title": "DJ Set",
+                "name": "WORKS Vol. 6 w/ Slipmatt & Hardcore Soy @ Loco Klub, Bristol"
+            }, {
+                "date": "2022-06-03",
+                "title": "DJ Set",
+                "name": "Tough Act @ Yes, Manchester"
+            }, {
+                "date": "2022-05-27",
+                "title": "DJ Set",
+                "name": "The Beatriarchy x More Pussy 3mpire @ Gut Level, Sheffield"
+            }, {
+                "date": "2022-05-20",
+                "title": "Radio",
+                "name": "Hardcore Soy show on Steam Radio"
+            }, {
+                "date": "2022-05-13",
+                "title": "Radio",
+                "name": "Belladonna Bitch Fist (FKA Hardcore x Hats) on Rainy City Radio"
+            }, {
+                "date": "2022-04-29",
+                "title": "DJ Set",
+                "name": "Pick and Mix Freeparty, NW"
+            }, {
+                "date": "2022-04-15",
+                "title": "DJ Set",
+                "name": "License to Jungle @ The Old Red Bus Station, Leeds"
+            }, {
+                "date": "2022-04-08",
+                "title": "DJ Set",
+                "name": "Tough Act @ The White Hotel, Manchester"
+            }, {
+                "date": "2022-03-25",
+                "title": "Radio",
+                "name": "FKA Hardcore b2b djlaundrybasket on Steam Radio"
+            }, {
+                "date": "2022-02-25",
+                "title": "Radio",
+                "name": "Hardcore sans Soy on Steam Radio"
+            }, {
+                "date": "2022-02-11",
+                "title": "DJ Set",
+                "name": "Intervention @ Partisan, Manchester"
+            }, {
+                "date": "2021-12-04",
+                "title": "DJ Set",
+                "name": "Tough Act @ The White Hotel, Manchester"
+            }, {
+                "date": "2021-12-04",
+                "title": "DJ Set",
+                "name": "Hardcore Soy for Semi Peppered @ The DBA, Manchester"
+            }, {
+                "date": "2021-11-10",
+                "title": "DJ",
+                "name": "for GLOR1A @ The White Hotel, Manchester"
+            }, {
+                "date": "2021-10-22",
+                "title": "Radio",
+                "name": "Hardcore Chandé on Rainy City Radio"
+            }, {
+                "date": "2021-09-24",
+                "title": "Radio",
+                "name": "Hardcore Soy live on 20ft Radio, Kyiv"
+            }, {
+                "date": "2021-09-23",
+                "title": "DJ Set",
+                "name": "Hardcore Soy for Lucid Juice @ Stage and Radio, Manchester"
+            }, {
+                "date": "2021-09-04",
+                "title": "DJ Set",
+                "name": "Mum's wedding @ secret location, Devon"
+            }, {
+                "date": "2020-03-06",
+                "title": "DJ Set",
+                "name": "Hardcore Soy for Intervention @ Soup Kitchen, Manchester"
+            }, {
+                "date": "2020-02-22",
+                "title": "DJ Set",
+                "name": "Babycakes @ Gut Level, Sheffield"
+            }, {
+                "date": "2020-01-25",
+                "title": "DJ Set",
+                "name": "Hardcore Soy for Intervention @ Partisan, Manchester"
+            }, {
+                "date": "2019-10-16",
+                "title": "Radio",
+                "name": "Hardcore Soy guestmix for Furious Styles on Rinse FM"
+            }]
+        };
 
-                data.events.forEach(function(event) {
-                    var date = new Date(event.date);
-                    var now = new Date();
-                    var html = '<tr><td>' + date.toLocaleDateString('en-GB', options) + '</td><td>[' + event.title + '] ' + event.name + '</td></tr>';
+        // fetch('./events.json')
+        //     .then(response => response.json())
+        //     .then(data => {
+        var cnt = 0;
+        const num_past_events = 3;
+        const options = {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+        };
 
-                    if (date > now) {
-                        upcoming.innerHTML = html + upcoming.innerHTML;
-                    } else {
-                        if (cnt < num_past_events) {
-                            past.innerHTML += html;
-                        }
-                        cnt++;
-                    }
-                });
+        data.events.forEach(function(event) {
+            var date = new Date(event.date);
+            var now = new Date();
+            var html = '<tr><td>' + date.toLocaleDateString('en-GB', options) + '</td><td>[' + event.title + '] ' + event.name + '</td></tr>';
 
-                past.innerHTML += '<tr><td colspan="2" style="text-align: center;"> and ' + (cnt - num_past_events) + ' more...</td></tr>';
-            })
+            if (date > now) {
+                upcoming.innerHTML = html + upcoming.innerHTML;
+            } else {
+                if (cnt < num_past_events) {
+                    past.innerHTML += html;
+                    // } else if (cnt == num_past_events) {
+                    //     hidden.innerHTML += '<tr><td></td><td></td></tr>';
+                } else {
+
+                    hidden.innerHTML += html;
+                }
+                cnt++;
+            }
+        });
+
+        foot.innerHTML = 'and ' + (cnt - num_past_events) + ' more...';
+
+        // on click, show the hidden events
+        foot.addEventListener('click', function() {
+            if (hidden.style.display === 'none') {
+                hidden.style.display = 'table';
+
+                past.lastElementChild.style.borderBottom = getComputedStyle(document.documentElement).getPropertyValue('--table-border');
+                foot.innerHTML = 'hide';
+            } else {
+                hidden.style.display = 'none';
+                foot.innerHTML = 'and ' + (cnt - num_past_events) + ' more...';
+
+                var last_child = past.lastElementChild;
+                last_child.style.borderBottom = 'none';
+            }
+
+            past.style.display = 'table';
+        });
+        // })
     </script>
