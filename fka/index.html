@@ -26,10 +26,22 @@
                     [Link] Tough Act website</a>
         </div>
         <h2>upcoming</h2>
-        <div id="upcoming" class="link" style="text-align: left;"></div>
+        <div class="link tab">
+            <table>
+                <tbody id="upcoming">
+
+                </tbody>
+            </table>
+        </div>
 
         <h2>past</h2>
-        <div id="past" class="link" style="text-align: left;"></div>
+        <div class="link tab">
+            <table>
+                <tbody id="past">
+
+                </tbody>
+            </table>
+        </div>
 
         <h2>selected mixes</h2>
         <div class="link">
@@ -101,22 +113,27 @@
             .then(data => {
                 var cnt = 0;
                 const num_past_events = 3;
+                const options = {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                };
 
                 data.events.forEach(function(event) {
                     var date = new Date(event.date);
                     var now = new Date();
-                    var html = '<p>' + date.toDateString() + ': [' + event.title + '] ' + event.name;
+                    var html = '<tr><td>' + date.toLocaleDateString('en-GB', options) + '</td><td>[' + event.title + '] ' + event.name + '</td></tr>';
 
                     if (date > now) {
                         upcoming.innerHTML = html + upcoming.innerHTML;
                     } else {
                         if (cnt < num_past_events) {
                             past.innerHTML += html;
-                        } else if (cnt == num_past_events) {
-                            past.innerHTML += '<p style="text-align: center">...</p>';
                         }
                         cnt++;
                     }
                 });
+
+                past.innerHTML += '<tr><td colspan="2" style="text-align: center;"> and ' + (cnt - num_past_events) + ' more...</td></tr>';
             })
     </script>
