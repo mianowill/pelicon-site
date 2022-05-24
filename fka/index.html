@@ -140,7 +140,7 @@
 
                     if (date > now) {
                         upcoming.innerHTML = html + upcoming.innerHTML;
-                        ticket_links.innerHTML += link;
+                        ticket_links.innerHTML = link + ticket_links.innerHTML;
                     } else {
                         if (cnt < num_past_events) {
                             past.innerHTML += html;
