@@ -52,8 +52,10 @@
         <h2>selected mixes</h2>
         <div class="link">
             <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1234538107&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/fkahardcore" title="FKA HARDCORE" target="_blank" style="color: #cccccc; text-decoration: none;">FKA HARDCORE</a> · <a href="https://soundcloud.com/fkahardcore/live-tough-act-the-white-hotel-dec-2021" title="Live @ Tough Act, The White Hotel, Dec 2021"
-                    target="_blank" style="color: #cccccc; text-decoration: none;">Live @ Tough Act, The White Hotel, Dec 2021</a></div>
+            <div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                <a href="https://soundcloud.com/fkahardcore" title="FKA HARDCORE" target="_blank" style="color: #cccccc; text-decoration: none;">FKA HARDCORE</a> · <a href="https://soundcloud.com/fkahardcore/live-tough-act-the-white-hotel-dec-2021" title="Live @ Tough Act, The White Hotel, Dec 2021"
+                    target="_blank" style="color: #cccccc; text-decoration: none;">Live @ Tough Act, The White Hotel, Dec 2021</a>
+            </div>
         </div>
         <div class="link">
             <p>FKA Hardcore @ Keep Hush, Bristol</p>
@@ -85,14 +87,14 @@
         </div>
 
         <h2>art</h2>
-        <div class="link">
+        <!-- <div class="link">
             <p>Visuals for DJ Soyboi Hope Works livestream. Made using Blender's grease pencil, with shaders modified from <a href="https://cloud.blender.org/p/gallery/5e46a80442fa9613e1cd1fca">'Train Station'
                         by Dedouze.</a></p>
             <video width=100% controls>
                     <source src="http://files.clubpelicon.club/soyboi_vp8.webm" type="video/webm">
                     <source src="http://files.clubpelicon.club/soyboi_x264.mp4" type="video/mp4">
                 </video>
-        </div>
+        </div> -->
         <div class="link">
             <p>Artwork for the Club60 show on 1020 Radio. First time playing about with volumetric shading.</p>
             <img loading="lazy" src="club60.webp" width=100% class="img">
@@ -100,7 +102,181 @@
     </div>
 
     <footer> (c) fka hardcore 2022 </footer>
-    <script src="events.js"></script>
+    <script>
+        var upcoming = document.getElementById('upcoming');
+        var past = document.getElementById('past');
+        var hidden = document.getElementById('hidden');
+        var foot = document.getElementById('foot');
+        var ticket_links = document.getElementById('tickets');
+
+        // fetch('./events.json')
+        //     .then(response => response.json())
+        //     .then(data => {
+
+        const data = {
+            "events": [{
+                "date": "2022-09-16",
+                "title": "DJ Set",
+                "name": "TBA, Bristol"
+            }, {
+                "date": "2022-08-26",
+                "title": "DJ Set",
+                "name": "Tough Act @ The White Hotel, Manchester"
+            }, {
+                "date": "2022-06-24",
+                "title": "DJ Set",
+                "name": "TBA, London"
+            }, {
+                "date": "2022-06-17",
+                "title": "DJ Set",
+                "name": "Bad Taste @ The Deaf Institute, Manchester",
+                "link": "https://www.thedeafinstitute.co.uk/event/bad-taste/"
+            }, {
+                "date": "2022-06-17",
+                "title": "Radio",
+                "name": "Hardcore Soy show on Steam Radio"
+            }, {
+                "date": "2022-06-10",
+                "title": "DJ Set",
+                "name": "WORKS Vol. 6 w/ Slipmatt & Hardcore Soy @ Loco Klub, Bristol",
+                "link": "https://hdfst.uk/E75241"
+            }, {
+                "date": "2022-06-03",
+                "title": "DJ Set",
+                "name": "Tough Act @ Yes, Manchester"
+            }, {
+                "date": "2022-05-27",
+                "title": "DJ Set",
+                "name": "The Beatriarchy x More Pussy 3mpire @ Gut Level, Sheffield",
+                "link": "https://ra.co/events/1532560"
+            }, {
+                "date": "2022-05-13",
+                "title": "Radio",
+                "name": "Belladonna Bitch Fist (FKA Hardcore x Hats) on Rainy City Radio"
+            }, {
+                "date": "2022-04-29",
+                "title": "DJ Set",
+                "name": "Pick and Mix Freeparty, NW"
+            }, {
+                "date": "2022-04-15",
+                "title": "DJ Set",
+                "name": "License to Jungle @ The Old Red Bus Station, Leeds"
+            }, {
+                "date": "2022-04-08",
+                "title": "DJ Set",
+                "name": "Tough Act @ The White Hotel, Manchester"
+            }, {
+                "date": "2022-03-25",
+                "title": "Radio",
+                "name": "FKA Hardcore b2b djlaundrybasket on Steam Radio"
+            }, {
+                "date": "2022-02-11",
+                "title": "DJ Set",
+                "name": "Intervention @ Partisan, Manchester"
+            }, {
+                "date": "2021-12-04",
+                "title": "DJ Set",
+                "name": "Tough Act @ The White Hotel, Manchester"
+            }, {
+                "date": "2021-12-04",
+                "title": "DJ Set",
+                "name": "Hardcore Soy for Semi Peppered @ The DBA, Manchester"
+            }, {
+                "date": "2021-11-10",
+                "title": "DJ",
+                "name": "for GLOR1A @ The White Hotel, Manchester"
+            }, {
+                "date": "2021-10-22",
+                "title": "Radio",
+                "name": "Hardcore Chandé on Rainy City Radio"
+            }, {
+                "date": "2021-09-24",
+                "title": "Radio",
+                "name": "Hardcore Soy live on 20ft Radio, Kyiv"
+            }, {
+                "date": "2021-09-23",
+                "title": "DJ Set",
+                "name": "Hardcore Soy for Lucid Juice @ Stage and Radio, Manchester"
+            }, {
+                "date": "2021-09-04",
+                "title": "DJ Set",
+                "name": "Mum's wedding @ secret location, Devon"
+            }, {
+                "date": "2020-03-06",
+                "title": "DJ Set",
+                "name": "Hardcore Soy for Intervention @ Soup Kitchen, Manchester"
+            }, {
+                "date": "2020-02-22",
+                "title": "DJ Set",
+                "name": "Hardcore Soy for Babycakes @ Gut Level, Sheffield"
+            }, {
+                "date": "2020-01-25",
+                "title": "DJ Set",
+                "name": "Hardcore Soy for Intervention @ Partisan, Manchester"
+            }, {
+                "date": "2019-11-30",
+                "title": "DJ Set",
+                "name": "Babycakes @ Gut Level, Sheffield"
+            }, {
+                "date": "2019-10-16",
+                "title": "Radio",
+                "name": "Hardcore Soy guestmix for Furious Styles on Rinse FM"
+            }]
+        };
+
+        var cnt = 0;
+        const num_past_events = 3;
+        const options = {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+        };
+
+        data.events.forEach(function(event) {
+            var date = new Date(event.date);
+            var now = new Date();
+            var html = '<tr><td>' + date.toLocaleDateString('en-GB', options) + '</td><td>[' + event.title + '] ' + event.name + '</td></tr>';
+
+            if (event.link) {
+                var link = '<a class="link" href="' + event.link + '" target="_blank">[Tickets] ' + event.name + '</a>';
+            } else {
+                var link = '';
+            }
+
+            if (date > now) {
+                upcoming.innerHTML = html + upcoming.innerHTML;
+                ticket_links.innerHTML = link + ticket_links.innerHTML;
+            } else {
+                if (cnt < num_past_events) {
+                    past.innerHTML += html;
+                } else {
+                    hidden.innerHTML += html;
+                }
+                cnt++;
+            }
+        });
+
+        foot.innerHTML = 'and ' + (cnt - num_past_events) + ' more...';
+
+        // on click, show the hidden events
+        foot.addEventListener('click', function() {
+            if (hidden.style.display === 'none') {
+                hidden.style.display = 'table';
+
+                past.lastElementChild.style.borderBottom = getComputedStyle(document.documentElement).getPropertyValue('--table-border');
+                foot.innerHTML = 'hide';
+            } else {
+                hidden.style.display = 'none';
+                foot.innerHTML = 'and ' + (cnt - num_past_events) + ' more...';
+
+                var last_child = past.lastElementChild;
+                last_child.style.borderBottom = 'none';
+            }
+
+            past.style.display = 'table';
+        });
+        // })
+    </script>
     <script data-goatcounter="https://fka.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     <!-- <script src="circletype.js"></script>
     <script>
