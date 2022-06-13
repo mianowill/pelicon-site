@@ -21,9 +21,6 @@
         <img src="fka.gif" alt="FKA Hardcore text" style="max-width: 45em; image-rendering: pixelated;" />
         <p id="subheading" style="width: 100%;">✨ playing other people's music for six years and counting ✨</p>
         <h2>links</h2>
-        <div id="tickets">
-            <!-- TODO: use a flexbox to organise these -->
-        </div>
         <div id="links">
             <a class="link" href="https://saltmagazine.co.uk/2022/04/16/the-joy-of-queer-dance-floors-in-manchester/">
                 [Feature] Salt Magazine: The Joy of Queer Dance Floors in Manchester</a>
@@ -113,7 +110,7 @@
         var past = document.getElementById('past');
         var hidden = document.getElementById('hidden');
         var foot = document.getElementById('foot');
-        var ticket_links = document.getElementById('tickets');
+        var links = document.getElementById('links');
 
         const data = {
             "events": [{
@@ -245,18 +242,18 @@
             var html_bold = '<tr><td><b>' + date.toLocaleDateString('en-GB', options) + '</b></td><td><b>[' + event.title + '] ' + event.name + '</b></td></tr>';
 
             if (event.link) {
-                var link = '<a class="link" href="' + event.link + '" target="_blank">[Tickets] ' + event.name + '</a>';
+                var link = '<a class="link" href="' + event.link + '">[Tickets] ' + event.name + '</a>';
             } else {
                 var link = '';
             }
 
             if (date > now) {
                 upcoming.innerHTML = html + upcoming.innerHTML;
-                ticket_links.innerHTML = link + ticket_links.innerHTML;
+                links.innerHTML = link + links.innerHTML;
             }
             else if (date.toDateString() == now.toDateString()) {
                 upcoming.innerHTML = html_bold + upcoming.innerHTML;
-                ticket_links.innerHTML = link + ticket_links.innerHTML;
+                links.innerHTML = link + links.innerHTML;
             }
             else {
                 if (cnt < num_past_events) {
